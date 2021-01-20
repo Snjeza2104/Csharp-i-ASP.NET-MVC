@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbFakultetModelStoreContainer" CdmEntityContainer="dbFakultetEntities">
+    <EntitySetMapping Name="Kolegij">
+      <EntityTypeMapping TypeName="dbFakultetModel.Kolegij">
+        <MappingFragment StoreEntitySet="Kolegij">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="DatumPocetka" ColumnName="DatumPocetka" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Ucionica" ColumnName="Ucionica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

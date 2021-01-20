@@ -1,0 +1,29 @@
+﻿@model ViseslojnaAplikacija.Models.TecajModel
+    <div>
+        <h4>TecajModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.IdTecaj)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.IdTecaj)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Naziv)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Naziv)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Opis)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Opis)
+            </dd>
+        </dl>
+    </div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { idTecaj=Model.IdTecaj}) |
+    @Html.ActionLink("Back to List", "List")
+</p>

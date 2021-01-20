@@ -1,0 +1,63 @@
+﻿@model WebShop.Models.Narudzbe
+@{
+    ViewBag.Title = "OrderDetails";
+    List<WebShop.Models.NarudzbeDetalji> lstDetalji = ViewBag.Detalji as List<WebShop.Models.NarudzbeDetalji>;
+}
+<h2>OrderDetails</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumKreiranja)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DatumKreiranja)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumVrijemeDostave)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DatumVrijemeDostave)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.JeDostavljeno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JeDostavljeno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Korisnici.Ime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Korisnici.Ime)
+        </dd>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Id</th>
+                    <th>Naziv</th>
+                    <th>Cijena</th>
+                    <th>Količina</th>
+                    <th>Ukupno</th>
+                </tr>
+                @foreach(WebShop.Models.NarudzbeDetalji item in lstDetalji)
+                {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Proizvodi.Naziv</td>
+                <td>@item.JedCijena</td>
+                <td>@item.Kolicina</td>
+                <td>@{
+                    decimal ukupnaCijena = decimal.Round(item.Kolicina * item.JedCijena, 2);
+                    @ukupnaCijena
+                }</td>
+            </tr>
+                }
+            </table>
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to Shop", "Index", "WebShop") |
+    @Html.ActionLink("Confirm", "Confirm")
+</p>

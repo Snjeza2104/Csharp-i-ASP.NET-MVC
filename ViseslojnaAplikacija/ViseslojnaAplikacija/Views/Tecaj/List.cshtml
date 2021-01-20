@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ViseslojnaAplikacija.Models.TecajModel>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model=>model.IdTecaj)</th>
+        <th>@Html.DisplayNameFor(model => model.Naziv)</th>
+        <th></th>
+    </tr>
+    @foreach(var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.IdTecaj)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Naziv)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { idTecaj = item.IdTecaj }) |
+        @Html.ActionLink("Details", "Details", new { idTecaj = item.IdTecaj }) |
+        @Html.ActionLink("Delete", "Delete", new { idTecaj = item.IdTecaj }) |
+    </td>
+</tr>
+    }
+</table>    

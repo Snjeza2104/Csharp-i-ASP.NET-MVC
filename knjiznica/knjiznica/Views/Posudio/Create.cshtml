@@ -1,0 +1,31 @@
+﻿@model knjiznica.Models.Posudio
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<fieldset>
+    <legend>Posudio</legend>
+
+    <div>
+        @Html.LabelFor(model => model.posudjivacID)
+        @Html.DropDownListFor(model => model.posudjivacID, new SelectList(Model.lstPosudjivaci, "posudjivacID", "prezime", "ime"), new { @class = "ddl" })
+        @Html.ValidationMessageFor(model => model.posudjivacID)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.knjigaID)
+        @Html.DropDownListFor(model => model.knjigaID, new SelectList(Model.lstKnjige, "knjigaID", "naslov"), new { @class = "ddl" })
+        @Html.ValidationMessageFor(model => model.knjigaID)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.datum_posudbe)
+        @Html.EditorFor(model => model.datum_posudbe)
+        @Html.ValidationMessageFor(model => model.datum_posudbe)
+    </div>
+    <div>
+        <input type="submit" value="Create" />
+    </div>
+</fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>

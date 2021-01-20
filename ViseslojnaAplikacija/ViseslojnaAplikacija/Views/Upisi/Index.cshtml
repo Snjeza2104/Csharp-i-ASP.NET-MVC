@@ -1,0 +1,40 @@
+﻿@model ViseslojnaAplikacija.Models.PolaznikModel
+@{
+    SelectList lstTecajevi = ViewBag.Tecajevi;
+}
+<div>
+    @using (Html.BeginForm())
+    {
+    <fieldset>
+        <legend>Prijavi se na tečaj</legend>
+        @Html.HiddenFor(model => model.IdPolaznik)
+        <div>
+            @Html.LabelFor(model => model.Ime)
+            @Html.EditorFor(model => model.Ime)
+            @Html.ValidationMessageFor(model => model.Ime)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Prezime)
+            @Html.EditorFor(model => model.Prezime)
+            @Html.ValidationMessageFor(model => model.Prezime)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Email)
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.IdGrad)
+          @Html.DropDownListFor(model=>model.IdGrad, new SelectList(Model.lstGradovi, "IdGrad", "Naziv"), new { @class="ddl"})
+            @Html.ValidationMessageFor(model => model.IdGrad)
+        </div>
+        <div>
+            @Html.Label("Tečaj: ")
+            @Html.DropDownList("idTecaj", lstTecajevi, new { @class="ddl"})
+        </div>
+        <div>
+            <input type="submit" value="Create" />
+        </div>
+    </fieldset>
+    }
+</div>

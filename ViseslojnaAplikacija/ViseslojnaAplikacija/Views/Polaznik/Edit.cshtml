@@ -1,0 +1,33 @@
+﻿@model ViseslojnaAplikacija.Models.PolaznikModel
+@ViewBag.Message
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<fieldset>
+    <legend>PolaznikModel</legend>
+    @Html.HiddenFor(model => model.IdPolaznik)
+    <div>
+        @Html.LabelFor(model => model.Ime)
+        @Html.EditorFor(model => model.Ime)
+        @Html.ValidationMessageFor(model => model.Ime)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Prezime)
+        @Html.EditorFor(model => model.Prezime)
+        @Html.ValidationMessageFor(model => model.Prezime)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Email)
+        @Html.EditorFor(model => model.Email)
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+    @Html.HiddenFor(model => model.IdGrad)
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+</fieldset>
+
+}
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>

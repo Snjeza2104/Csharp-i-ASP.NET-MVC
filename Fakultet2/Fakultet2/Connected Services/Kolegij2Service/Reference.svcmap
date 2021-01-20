@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8bef9209-7d73-4e77-854e-961f3e41c4c0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59352/KolegijService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="KolegijService.xsd" MetadataType="Schema" ID="2b80f17b-2a52-4057-b4f9-d398f930fd4e" SourceId="1" SourceUrl="http://localhost:59352/KolegijService.svc?xsd=xsd1" />
+    <MetadataFile FileName="KolegijService1.xsd" MetadataType="Schema" ID="b51106af-f9e1-4d0e-ba64-79932e4985ae" SourceId="1" SourceUrl="http://localhost:59352/KolegijService.svc?xsd=xsd0" />
+    <MetadataFile FileName="KolegijService.disco" MetadataType="Disco" ID="ffd7019d-cd8e-47c4-ad54-7147260a9342" SourceId="1" SourceUrl="http://localhost:59352/KolegijService.svc?disco" />
+    <MetadataFile FileName="KolegijService2.xsd" MetadataType="Schema" ID="3f0d191e-2946-41f7-9ae3-05a13efeec7e" SourceId="1" SourceUrl="http://localhost:59352/KolegijService.svc?xsd=xsd2" />
+    <MetadataFile FileName="KolegijService.wsdl" MetadataType="Wsdl" ID="b942ca0f-cac3-4f14-b448-01cac5d05615" SourceId="1" SourceUrl="http://localhost:59352/KolegijService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

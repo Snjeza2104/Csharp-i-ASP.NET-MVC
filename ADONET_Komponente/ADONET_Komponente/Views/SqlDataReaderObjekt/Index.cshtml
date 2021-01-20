@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ADONET_Komponente.Models.Tecaj>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model=>model.Naziv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model=>model.Opis)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Naziv)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Opis)
+    </td>
+</tr>
+    }
+</table>

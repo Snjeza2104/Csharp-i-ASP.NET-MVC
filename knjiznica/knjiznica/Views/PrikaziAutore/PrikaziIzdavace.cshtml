@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PrikaziIzdavace</title>
+</head>
+<body>
+    <div id="main">
+        @if (ViewBag.Izdavaci != null)
+        {
+            <p>ViewBag.Message</p>
+            <table>
+                <tr>
+                    <th>Izdavač ID</th>
+                    <th>Ime izdavača</th>
+                    <th>Broj telefona</th>
+                    <th>Fax</th>
+                    <th>Email</th>
+                </tr>
+                @foreach (knjiznica.Models.Izdavac izdavac in ViewBag.Izdavaci as IEnumerable<knjiznica.Models.Izdavac>)
+                {
+                    <tr>
+                        <td>@izdavac.izdavacID</td>
+                        <td>@izdavac.ime_izdavaca</td>
+                        <td>@izdavac.broj_telefona</td>
+                        <td>@izdavac.fax</td>
+                        <td>@izdavac.email</td>
+                    </tr>
+                }
+            </table>
+        }
+        @Html.ActionLink("< Prikaži autore", "PrikaziAutore", "PrikaziAutore")|
+        @Html.ActionLink("< Prikaži knjige", "PrikaziKnjige", "PrikaziAutore")|
+        @Html.ActionLink("< Prikaži izdavače", "PrikaziIzdavace", "PrikaziAutore")|
+        @Html.ActionLink("< Prikaži posuđivače", "PrikaziPosudjivace", "PrikaziAutore")
+    </div>
+</body>
+</html>

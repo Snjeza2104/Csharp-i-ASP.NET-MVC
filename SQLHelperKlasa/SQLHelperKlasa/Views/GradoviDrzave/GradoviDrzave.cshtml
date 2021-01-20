@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+    SelectList lstDrzave = ViewBag.Drzave;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GradoviDrzave</title>
+</head>
+<body>
+    <div id="main"> 
+        @using (Html.BeginForm())
+        {
+            <fieldset>
+                <legend>Odaberite državu i grad</legend>
+                <label>Države</label>
+                @Html.DropDownList("idDrzava", lstDrzave, "--Odaberite državu--",new { onchange="this.form.submit();", @class="ddl"})
+                @if (ViewBag.Gradovi != null)
+                {
+                    <label>Gradovi:</label>
+                    SelectList lstGradovi = ViewBag.Gradovi;
+                    @Html.DropDownList("idGrad", lstGradovi, "--Odaberite grad---", new { @class="ddl"})
+                    <input type="submit" value="Dohvati polaznike" />
+                }
+            </fieldset>
+        }
+    </div>
+</body>
+</html>

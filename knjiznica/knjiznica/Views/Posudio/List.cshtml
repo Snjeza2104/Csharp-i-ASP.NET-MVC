@@ -1,0 +1,30 @@
+﻿@model IEnumerable<knjiznica.Models.Posudio>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.posudjivacID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.knjigaID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.datum_posudbe)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.posudjivacID)</td>
+            <td>@Html.DisplayFor(modelItem => item.knjigaID)</td>
+            <td>@Html.DisplayFor(modelItem => item.datum_posudbe)</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { knjigaID = item.knjigaID, posudjivacID = item.posudjivacID })
+                @Html.ActionLink("Delete", "Delete", new { knjigaID = item.knjigaID, posudjivacID = item.posudjivacID })
+            </td>
+        </tr>
+    }
+</table>

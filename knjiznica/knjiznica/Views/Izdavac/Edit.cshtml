@@ -1,0 +1,37 @@
+﻿@model knjiznica.Models.Izdavac
+@ViewBag.Message
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<fieldset>
+    <legend>Autor</legend>
+    @Html.HiddenFor(model => model.izdavacID)
+    <div>
+        @Html.LabelFor(model => model.ime_izdavaca)
+        @Html.EditorFor(model => model.ime_izdavaca)
+        @Html.ValidationMessageFor(model => model.ime_izdavaca)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.broj_telefona)
+        @Html.EditorFor(model => model.broj_telefona)
+        @Html.ValidationMessageFor(model => model.broj_telefona)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.fax)
+        @Html.EditorFor(model => model.fax)
+        @Html.ValidationMessageFor(model => model.fax)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.email)
+        @Html.EditorFor(model => model.email)
+        @Html.ValidationMessageFor(model => model.email)
+    </div>
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+</fieldset>
+
+}
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>

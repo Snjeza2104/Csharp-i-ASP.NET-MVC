@@ -1,0 +1,51 @@
+﻿@model PolaznikSBazom.Models.PolaznikModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div> 
+        @ViewBag.Message
+        <fieldset>
+            <legend>PolaznikModel</legend>
+            <dl>
+                <dt>
+                    @Html.DisplayNameFor(model => model.IdPolaznik)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.IdPolaznik)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Ime)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Ime)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Prezime)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Prezime)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+            </dl>
+        </fieldset>
+    </div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { idPolaznik=Model.IdPolaznik})|
+    @Html.ActionLink("Back to List", "List")
+</p>
+</body>
+</html>

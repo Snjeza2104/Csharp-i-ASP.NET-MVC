@@ -1,0 +1,37 @@
+﻿@model knjiznica.Models.Posudjivac
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>Posuđivač</legend>
+        @Html.HiddenFor(model => model.posudjivacID)
+        <div>
+            @Html.LabelFor(model => model.prezime)
+            @Html.EditorFor(model => model.prezime)
+            @Html.ValidationMessageFor(model => model.prezime)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.ime)
+            @Html.EditorFor(model => model.ime)
+            @Html.ValidationMessageFor(model => model.ime)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.mobitel)
+            @Html.EditorFor(model => model.mobitel)
+            @Html.ValidationMessageFor(model => model.mobitel)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.email)
+            @Html.EditorFor(model => model.email)
+            @Html.ValidationMessageFor(model => model.email)
+        </div>
+
+        <div>
+            <input type="submit" value="Create" />
+        </div>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>

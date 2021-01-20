@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Korijen</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm())
+        {
+            @Html.TextBox("broj")
+            <br/>
+            <input type="submit" value="Korijenuj" />
+        }
+    </div>
+    <div>
+        @ViewBag.Error
+        @ViewBag.Rezultat
+    </div>
+</body>
+</html>

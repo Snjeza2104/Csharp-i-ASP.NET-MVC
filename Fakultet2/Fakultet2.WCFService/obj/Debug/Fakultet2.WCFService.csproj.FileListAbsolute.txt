@@ -1,0 +1,12 @@
+C:\Users\snjez\source\repos\Fakultet2\Fakultet2.WCFService\bin\Fakultet2.WCFService.dll.config
+C:\Users\snjez\source\repos\Fakultet2\Fakultet2.WCFService\bin\Fakultet2.WCFService.dll
+C:\Users\snjez\source\repos\Fakultet2\Fakultet2.WCFService\bin\Fakultet2.WCFService.pdb
+C:\Users\snjez\source\repos\Fakultet2\Fakultet2.WCFService\bin\EntityFramework.dll
+C:\Users\snjez\source\repos\Fakultet2\Fakultet2.WCFService\bin\EntityFramework.SqlServer.dll
+C:\Users\snjez\source\repos\Fakultet2\Fakultet2.WCFService\bin\EntityFramework.xml
+C:\Users\snjez\source\repos\Fakultet2\Fakultet2.WCFService\bin\EntityFramework.SqlServer.xml
+C:\Users\snjez\source\repos\Fakultet2\Fakultet2.WCFService\obj\Debug\Fakultet2.WCFService.csprojAssemblyReference.cache
+C:\Users\snjez\source\repos\Fakultet2\Fakultet2.WCFService\obj\Debug\Fakultet2.WCFService.csproj.CoreCompileInputs.cache
+C:\Users\snjez\source\repos\Fakultet2\Fakultet2.WCFService\obj\Debug\Fakultet2.WCFService.csproj.CopyComplete
+C:\Users\snjez\source\repos\Fakultet2\Fakultet2.WCFService\obj\Debug\Fakultet2.WCFService.dll
+C:\Users\snjez\source\repos\Fakultet2\Fakultet2.WCFService\obj\Debug\Fakultet2.WCFService.pdb

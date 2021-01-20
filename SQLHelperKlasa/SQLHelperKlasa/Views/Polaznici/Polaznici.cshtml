@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Polaznici</title>
+</head>
+<body>
+    <div id="main"> 
+        @if (ViewBag.Polaznici != null)
+        {
+            <p>@ViewBag.Message</p>
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Email</th>
+                </tr>
+                @foreach(SQLHelperKlasa.Models.PolaznikModel polaznik in ViewBag.Polaznici as IEnumerable<SQLHelperKlasa.Models.PolaznikModel>)
+                {
+            <tr>
+                <td>@polaznik.IdPolaznik</td>
+                <td>@polaznik.Ime</td>
+                <td>@polaznik.Prezime</td>
+                <td>@polaznik.Email</td>
+            </tr>
+                }
+            </table>
+        }
+        @Html.ActionLink("< Natrag", "GradoviDrzave", "GradoviDrzave")
+    </div>
+</body>
+</html>

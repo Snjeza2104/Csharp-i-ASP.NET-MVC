@@ -1,0 +1,26 @@
+﻿@model ViseslojnaAplikacija.Models.TecajModel
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+<fieldset>
+    <legend>TecajModel</legend>
+    @Html.HiddenFor(model => model.IdTecaj)
+
+    <div>
+        @Html.LabelFor(model => model.Naziv)
+        @Html.EditorFor(model => model.Naziv)
+        @Html.ValidationMessageFor(model => model.Naziv)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Opis)
+        @Html.EditorFor(model => model.Opis)
+        @Html.ValidationMessageFor(model => model.Opis)
+    </div>
+    <div>
+        <input type="submit" value="Create" />
+    </div>
+</fieldset>
+    }
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>

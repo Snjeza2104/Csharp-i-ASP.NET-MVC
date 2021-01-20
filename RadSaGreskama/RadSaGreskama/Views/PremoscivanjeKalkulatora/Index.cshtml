@@ -1,0 +1,35 @@
+﻿@model RadSaGreskama.Models.Kalkulator
+@{ 
+    ViewBag.Title = "Rad sa greškama";
+}
+<style>
+    label{
+        display:inline-block;
+        width:150px;
+        margin:5px;
+        font-weight:bold;
+    }
+</style>
+<h2>@ViewBag.Title</h2>
+<div>
+    <h4>Kalkulator</h4>
+    <hr />
+    @using (Html.BeginForm("Dijeli", "PremoscivanjeKalkulatora"))
+    {
+        <div>
+            <label>Prvi broj:</label>
+            @Html.EditorFor(model => model.PrviBroj)
+        </div>
+        <div>
+            <label>Drugi broj:</label>
+            @Html.EditorFor(model => model.DrugiBroj)
+        </div>
+        <div>
+            <label>Rezultat:</label>
+            <label>@Model.Rezultat</label>
+        </div>
+        <p>
+            <input type="submit" name="id" value="Dijeli" />
+        </p>
+    }
+</div>

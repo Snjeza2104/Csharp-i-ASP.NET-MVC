@@ -1,0 +1,21 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<table>
+    <tr>
+        <th>
+           Naziv
+        </th>
+    </tr>
+    @foreach(var item in Model)
+    {
+<tr>
+    <td>
+        @item
+    </td>
+</tr>
+    }
+</table>

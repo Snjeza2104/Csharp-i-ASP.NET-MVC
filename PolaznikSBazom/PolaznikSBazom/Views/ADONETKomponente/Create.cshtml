@@ -1,0 +1,43 @@
+﻿@model PolaznikSBazom.Models.PolaznikModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    @ViewBag.Message
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>PolaznikModel</legend>
+        @Html.HiddenFor(model => model.IdPolaznik)
+
+        <div>
+            @Html.LabelFor(model => model.Ime)
+            @Html.EditorFor(model => model.Ime)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Prezime)
+            @Html.EditorFor(model => model.Prezime)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Email)
+            @Html.EditorFor(model => model.Email)
+        </div>
+        <div>
+            <input type="submit" value="Create" />
+        </div>
+    </fieldset>
+    }
+    <div> 
+        @Html.ActionLink("Back to list", "List")
+    </div>
+</body>
+</html>

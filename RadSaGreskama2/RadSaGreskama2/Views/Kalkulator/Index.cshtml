@@ -1,0 +1,75 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        body{
+            font-family:'Segoe UI';
+        }
+        div#main{
+            width:300px;
+            margin:auto;
+            padding:10px;
+        }
+        label{
+            display:block;
+            margin:10px 0;
+        }
+        [type=text]{
+            width:200px;
+            height:20px;
+            border:1px solid #ccc;
+            padding:3px;
+        }
+        .ddl{
+            width:260px;
+            height:30px;
+            padding: 5px;
+            border:1px solid #ccc;
+        }
+        [type=submit]{
+            border:1px solid #ccc;
+            width:260px;
+            height:40px;
+            font-size:.8em;
+            font-weight:bold;
+            margin:10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        @using (Html.BeginForm())
+        {
+            <label>
+                Broj A: 
+                <input type="text" name="brojA" value=""/>
+            </label>
+            <label>
+                Broj B: 
+                @Html.TextBox("brojB", null, new { style="border:1px solid #ccc;"})
+            </label>
+            <p>Računska operacija:</p>
+            @Html.DropDownList("operacija", selectList: new List<SelectListItem>()
+       {
+           new SelectListItem{Text="+", Value="+"},
+           new SelectListItem{Text="-", Value="-"},
+           new SelectListItem{Text="*", Value="*"},
+           new SelectListItem{Text="/", Value="/"},
+           new SelectListItem{Text="Kriva računska operacija", Value="x"}
+       },
+       htmlAttributes: new {@class="ddl"})
+
+            <input type="submit" name="name" value="Izračunaj" />
+            <label>@ViewBag.rezultat</label>
+        }
+    </div>
+</body>
+</html>

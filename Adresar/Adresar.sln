@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adresar", "Adresar\Adresar.csproj", "{B7FEF586-6CF0-428E-B3E0-40FB59A805C8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{720F9C29-3C7A-4BBC-B7C6-71A5D1C17D36} = {720F9C29-3C7A-4BBC-B7C6-71A5D1C17D36}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adresar.WCFService", "Adresar.WCFService\Adresar.WCFService.csproj", "{720F9C29-3C7A-4BBC-B7C6-71A5D1C17D36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7FEF586-6CF0-428E-B3E0-40FB59A805C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7FEF586-6CF0-428E-B3E0-40FB59A805C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7FEF586-6CF0-428E-B3E0-40FB59A805C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7FEF586-6CF0-428E-B3E0-40FB59A805C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{720F9C29-3C7A-4BBC-B7C6-71A5D1C17D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{720F9C29-3C7A-4BBC-B7C6-71A5D1C17D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{720F9C29-3C7A-4BBC-B7C6-71A5D1C17D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{720F9C29-3C7A-4BBC-B7C6-71A5D1C17D36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F394F10-BFD8-4821-B747-3609FDB34473}
+	EndGlobalSection
+EndGlobal

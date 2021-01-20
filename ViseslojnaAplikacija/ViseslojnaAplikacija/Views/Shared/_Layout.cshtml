@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <nav class="main-nav">
+            <a href="/Upisi/Index">Naslovnica</a>
+            <a href="/Polaznik/List">Polaznici</a>
+            <a href="/Tecaj/List">Tečajevi</a>
+            <a href="/MasterDetails/List">Pregled upisa</a>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="message">
+            @ViewBag.Message
+            @TempData["Message"]
+        </div>
+        @RenderBody()
+    </main>
+    <footer class="footer">
+        <p>
+            POU Algebra &copy; All rights reserved - @DateTime.Now.Year
+        </p>
+    </footer>
+    <script src="~/scripts/jquery-1.8.2.min.js"></script>
+    <script src="~/scripts/jquery.validate.min.js"></script>
+    <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

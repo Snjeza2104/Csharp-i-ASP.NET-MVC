@@ -1,0 +1,40 @@
+﻿@model IEnumerable<knjiznica.Models.Izdavac>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.izdavacID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ime_izdavaca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.broj_telefona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@Html.DisplayFor(modelItem => item.izdavacID)</td>
+    <td>@Html.DisplayFor(modelItem => item.ime_izdavaca)</td>
+    <td>@Html.DisplayFor(modelItem => item.broj_telefona)</td>
+    <td>@Html.DisplayFor(modelItem => item.fax)</td>
+    <td>@Html.DisplayFor(modelItem => item.email)</td>
+
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { izdavacID = item.izdavacID }) |
+        @Html.ActionLink("Delete", "Delete", new { izdavacID = item.izdavacID })
+    </td>
+</tr>
+    }
+</table>

@@ -1,0 +1,12 @@
+C:\Users\snjez\source\repos\Adresar\Adresar.WCFService\bin\Adresar.WCFService.dll.config
+C:\Users\snjez\source\repos\Adresar\Adresar.WCFService\bin\Adresar.WCFService.dll
+C:\Users\snjez\source\repos\Adresar\Adresar.WCFService\bin\Adresar.WCFService.pdb
+C:\Users\snjez\source\repos\Adresar\Adresar.WCFService\bin\EntityFramework.dll
+C:\Users\snjez\source\repos\Adresar\Adresar.WCFService\bin\EntityFramework.SqlServer.dll
+C:\Users\snjez\source\repos\Adresar\Adresar.WCFService\bin\EntityFramework.xml
+C:\Users\snjez\source\repos\Adresar\Adresar.WCFService\bin\EntityFramework.SqlServer.xml
+C:\Users\snjez\source\repos\Adresar\Adresar.WCFService\obj\Debug\Adresar.WCFService.csprojAssemblyReference.cache
+C:\Users\snjez\source\repos\Adresar\Adresar.WCFService\obj\Debug\Adresar.WCFService.csproj.CoreCompileInputs.cache
+C:\Users\snjez\source\repos\Adresar\Adresar.WCFService\obj\Debug\Adresar.WCFService.csproj.CopyComplete
+C:\Users\snjez\source\repos\Adresar\Adresar.WCFService\obj\Debug\Adresar.WCFService.dll
+C:\Users\snjez\source\repos\Adresar\Adresar.WCFService\obj\Debug\Adresar.WCFService.pdb

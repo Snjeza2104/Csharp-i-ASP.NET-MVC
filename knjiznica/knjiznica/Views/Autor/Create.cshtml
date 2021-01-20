@@ -1,0 +1,27 @@
+﻿@model knjiznica.Models.Autor
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>Autor</legend>
+        @Html.HiddenFor(model => model.autorID)
+        <div>
+            @Html.LabelFor(model => model.ime)
+            @Html.EditorFor(model => model.ime)
+            @Html.ValidationMessageFor(model => model.ime)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.prezime)
+            @Html.EditorFor(model => model.prezime)
+            @Html.ValidationMessageFor(model => model.prezime)
+        </div>
+        
+        <div>
+            <input type="submit" value="Create" />
+        </div>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>

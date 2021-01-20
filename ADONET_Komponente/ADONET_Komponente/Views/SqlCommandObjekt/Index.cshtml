@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<p>@ViewBag.Message</p>
+@Html.ActionLink("Kreiraj tečaj", "Create", "SqlCommandObjekt")
+@Html.ActionLink("Uredi tečaj", "Edit", "SqlCommandObjekt")
+@Html.ActionLink("Obriši tečaj", "Delete", "SqlCommandObjekt")
+@Html.ActionLink("Vrati broj tečaja", "Count", "SqlCommandObjekt")

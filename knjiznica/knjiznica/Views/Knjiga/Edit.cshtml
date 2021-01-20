@@ -1,0 +1,42 @@
+﻿@model knjiznica.Models.Knjiga
+@ViewBag.Message
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<fieldset>
+    <legend>PolaznikModel</legend>
+    @Html.HiddenFor(model => model.knjigaID)
+    <div>
+        @Html.LabelFor(model => model.naslov)
+        @Html.EditorFor(model => model.naslov)
+        @Html.ValidationMessageFor(model => model.naslov)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.broj_stranica)
+        @Html.EditorFor(model => model.broj_stranica)
+        @Html.ValidationMessageFor(model => model.broj_stranica)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.cijena)
+        @Html.EditorFor(model => model.cijena)
+        @Html.ValidationMessageFor(model => model.cijena)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.godina_izdanja)
+        @Html.EditorFor(model => model.godina_izdanja)
+        @Html.ValidationMessageFor(model => model.godina_izdanja)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.izdavacID)
+        @Html.DropDownListFor(model => model.izdavacID, new SelectList(Model.lstIzdavaci, "izdavacID", "ime_izdavaca"), new { @class = "ddl" })
+        @Html.ValidationMessageFor(model => model.izdavacID)
+    </div>
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+</fieldset>
+
+}
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>
